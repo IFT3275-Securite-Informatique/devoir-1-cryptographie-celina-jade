@@ -122,7 +122,7 @@ print("\nC = "+"\""+C+"\"")
 print("\nLongeur du cryprogramme C en bits =",len(C))
 print("\nLongeur du cryprogramme C en octets =",len(C)//8)
 
-"""## L'idée est de créer un immense cryptogramme à partir d'un gros échantillon de texte français et d'analyser 
+"""L'idée est de créer un immense cryptogramme à partir d'un gros échantillon de texte français et d'analyser 
 les fréquences d'apparition des blocs de bytes et les comparer avec la fréquence d'apparition des 
 symboles dans la liste de symboles fixée et trouvée dans un grand échantillon de texte français pour 
 créer une clé espérée qui devrait correspondre à la clé secrète originale qu'on ne connait pas"""
@@ -187,7 +187,6 @@ def decrypt(C):
 
     dictionnaire = gen_key(symboles)
     K = gen_key(symboles)
-    
     # Séparer le cryptogramme en bytes
     chunks = [C[i:i + 8] for i in range(0, len(C), 8)]
 
